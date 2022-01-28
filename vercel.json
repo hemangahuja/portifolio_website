@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source":"/just_chatting/:asset*", "destination": "https://just-chatting-lac.vercel.app/:asset*" },
+        {   "source":"/(.*)", "destination":"/"
+        }
+    ]
+}
