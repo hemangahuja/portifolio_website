@@ -1,19 +1,9 @@
-/** @type {import('next').NextConfig} */
-const JC = "https://just-chatting-lac.vercel.app/";
 module.exports = {
   async rewrites() {
     return [
       {
-        source: '/:path*',
-        destination: `/:path*`,
-      },
-      {
-        source: '/just_chatting',
-        destination: `${JC}`,
-      },
-      {
-        source: '/just_chatting/:path*',
-        destination: `${JC}/:path*`,
+        source: '/just_chatting/:slug*',
+        destination: 'https://just-chatting-lac.vercel.app/just_chatting/:slug*', // Matched parameters can be used in the destination
       },
     ]
   },
